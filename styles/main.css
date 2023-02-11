@@ -63,9 +63,8 @@ main {
  main div, .contact-info {
     display: inline-block;
     position: relative;
-    left: 150px;
+    left: 10vw;
     width: 50vw;
-    padding-left: 4rem;
     vertical-align: top;
 }
 
@@ -78,7 +77,7 @@ main {
 
 .player-photo {
     position: fixed;
-    max-width: 30vw;
+    max-width: 40vw;
     right: 0.5rem;
     padding-left: 5rem;
     z-index: 2;
