@@ -1,38 +1,36 @@
 * {
-    font-family: "Comic Sans MS";
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: "Comic Sans MS";
 }
 
 header {
-    display: block;
+    z-index: 1;
     background-color: white;
     position: sticky;
     top: 0;
-    z-index: 1;
 }
 
 header figure {
-    height: 25vh;
     background-image: url(../assets/header-banner.jpg);
+    background-color: black;
+    height: 25vh;
 }
 
 header nav {
-    text-align: right;
-    position: relative;
-    right: 0.4rem;
-    bottom: 1rem;
+    position: fixed;
+    top: 4vh;
+    right: 1vw;
 }
 
 header nav a {
-    padding: 0 1rem 0 1rem;
-    background-color: #4472c4;
     box-shadow: 3px 3px gray;
+    background-color: #4472c4;
     border: 2px solid black;
-    text-decoration: none;
-    font-size: 1rem;
     color: white;
+    text-decoration: none;
+    padding: 0 1.5vw 0 1.5vw;
 }
 
 #button-active-page {
@@ -40,59 +38,61 @@ header nav a {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 4vh;
     font-style: italic;
     font-weight: lighter;
-    padding-bottom: 0.2rem;
 }
 
 h2 {
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
+    font-size: 2.5vh;
+    border-top: 0.3vh solid;
+    border-bottom: 0.3vh solid;
     text-align: center;
+    padding: 0.5vh 0 1vh 0;
 }
 
 main {
-    min-height: 55vh;
-    margin: 0 1rem 0 1rem;
+    margin: 4vh 1vw 0 1vw;
 }
 
- main div, .contact-info {
-    display: inline-block;
-    position: relative;
-    left: 10vw;
-    width: 50vw;
+main div,
+main div .contact-info {
+    width: 48vw;
     vertical-align: top;
+    position: relative;
+    left: 12vw;
+}
+
+main aside {
+    z-index: 2;
 }
 
 .main-logo {
+    background-color: rgba(222, 22, 22, 0.78);
+    width: 10vw;
+    border: 0.2vw solid;
     position: fixed;
-    max-width: 10vw;
-    left: 0.5rem;
-    z-index: 2;
+    top: 40vh;
+    left: 1vw;
 }
 
 .player-photo {
+    width: 37vw;
+    border: 0.2vw solid;
     position: fixed;
-    max-width: 40vw;
-    right: 0.5rem;
-    padding-left: 5rem;
-    z-index: 2;
+    top: 40vh;
+    right: 1vw;
 }
 
-h2, div article, .contact-info p {
-    padding: 0.5rem 0 0.5rem 0;
+div article,
+.contact-info p {
+    margin: 0 1vw 2vh 1vw;
 }
 
-
-h3 {
+.upcoming-events-subtitle {
     font-style: italic;
-    font-size: 1.2rem;
 }
 
 article p {
-    text-indent: 1.5rem;
+    text-indent: 1.5vw;
 }
