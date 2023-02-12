@@ -15,6 +15,7 @@ header {
 header figure {
     background-image: url(../assets/header-banner.jpg);
     background-color: black;
+    background-size: cover;
     height: 25vh;
 }
 
