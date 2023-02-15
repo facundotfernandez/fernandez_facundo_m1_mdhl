@@ -18,12 +18,12 @@ header figure {
     background-color: black;
     background-size: cover;
     background-position: 0 20%;
-    height: 24vh;
+    height: 10vh;
 }
 
 header nav {
     position: fixed;
-    top: 4vh;
+    top: 2vh;
     right: 1vw;
 }
 
@@ -41,100 +41,112 @@ header nav a {
 }
 
 h1 {
-    font-size: 4vh;
+    font-size: 3vh;
     font-style: italic;
     font-weight: lighter;
 }
 
 h2 {
-    font-size: 3vh;
+    font-size: 2vh;
     padding: 0.5vh 0 1vh 0;
     border-top: 0.3vh solid;
     border-bottom: 0.3vh solid;
     text-align: center;
 }
 
-main {
-    margin-top: 4vh;
-}
-
 #rules-title {
     text-align: center;
 }
 
-main#rules-font * {
+main#arial-font * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 img.main-logo {
     background-color: rgba(222, 22, 22, 0.78);
-    width: 10vw;
+    width: 8vw;
     border: 0.2vw solid;
     position: fixed;
-    top: 40vh;
+    top: 20vh;
     left: 1vw;
 }
 
 img.image-right-aside {
-    width: 34vw;
+    width: 28vw;
     border: 0.2vw solid;
     position: fixed;
-    top: 40vh;
+    top: 20vh;
     right: 1vw;
 }
 
 article,
 .contact-info,
-li {
-    padding-bottom: 2vh;
+li:not(ol.alpha-list>li), .rules-h3 {
+    padding-bottom: 3vh;
 }
 
 .italic {
     font-style: italic;
 }
 
-main :not(.centered-text-column-full-width) article p {
+main article p {
     text-indent: 1rem;
-    font-size: 0.8rem;
-}
-
-main section.centered-text-column-full-width ol:not([type="a"]) {
-    margin-left: 1rem;
-}
-
-ol[type="a"] li {
-    padding: 0;
-}
-
-.coach-exception {
-    margin-left: 2rem;
 }
 
 main {
+    margin-top: 1vh;
+    min-height: 70vh;
     display: flex;
     justify-content: space-around;
-    height: 60vh;
 }
 
-section.centered-text-column-full-width {
+main.fixed-aside-images {
+    position: relative;
+    left: 10vw;
+}
+
+.fixed-aside-images {
+    width: 60vw;
+}
+
+.centered-text-column-full-width {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 95vw;
 }
 
 table {
     background-color: rgba(222, 22, 22, 0.38);
     height: 35vh;
-    width: 90vw;
+    width: 100%;
     text-align: center;
     align-self: center;
     border: 0.2vw solid;
 }
 
-section.centered-text-column-full-width div p {
+section.centered-text-column-full-width div:not(.table-footer-note):not(.phone-email) p {
     font-style: italic;
 }
 
-.table-note{
+.table-header-note{
     text-decoration: underline;
+}
+
+ol, .alpha-list, .coach-exception {
+    list-style-position: inside;
+}
+
+.alpha-list {
+    list-style-type: lower-alpha;
+}
+
+.coach-exception {
+    margin: 0 5vw 0 5vw;
+    list-style-type: circle;
+}
+
+.phone-email {
+    display: flex;
+    justify-content: space-between;
 }
