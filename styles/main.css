@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Comic Sans MS";
+    font-size: 24px;
 }
 
 header {
@@ -16,7 +17,8 @@ header figure {
     background-image: url(../assets/header-banner.jpg);
     background-color: black;
     background-size: cover;
-    height: 25vh;
+    background-position: 0 20%;
+    height: 24vh;
 }
 
 header nav {
@@ -26,12 +28,12 @@ header nav {
 }
 
 header nav a {
+    padding: 0 1.5vw 0 1.5vw;
     box-shadow: 3px 3px gray;
     background-color: #4472c4;
     border: 2px solid black;
     color: white;
     text-decoration: none;
-    padding: 0 1.5vw 0 1.5vw;
 }
 
 #button-active-page {
@@ -45,30 +47,26 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5vh;
+    font-size: 3vh;
+    padding: 0.5vh 0 1vh 0;
     border-top: 0.3vh solid;
     border-bottom: 0.3vh solid;
     text-align: center;
-    padding: 0.5vh 0 1vh 0;
 }
 
 main {
-    margin: 4vh 1vw 0 1vw;
+    margin-top: 4vh;
 }
 
-main div,
-main div .contact-info {
-    width: 48vw;
-    vertical-align: top;
-    position: relative;
-    left: 12vw;
+#rules-title {
+    text-align: center;
 }
 
-main aside {
-    z-index: 2;
+main#rules-font * {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.main-logo {
+img.main-logo {
     background-color: rgba(222, 22, 22, 0.78);
     width: 10vw;
     border: 0.2vw solid;
@@ -77,23 +75,66 @@ main aside {
     left: 1vw;
 }
 
-.player-photo {
-    width: 37vw;
+img.image-right-aside {
+    width: 34vw;
     border: 0.2vw solid;
     position: fixed;
     top: 40vh;
     right: 1vw;
 }
 
-div article,
-.contact-info p {
-    margin: 0 1vw 2vh 1vw;
+article,
+.contact-info,
+li {
+    padding-bottom: 2vh;
 }
 
-.upcoming-events-subtitle {
+.italic {
     font-style: italic;
 }
 
-article p {
-    text-indent: 1.5vw;
+main :not(.centered-text-column-full-width) article p {
+    text-indent: 1rem;
+    font-size: 0.8rem;
+}
+
+main section.centered-text-column-full-width ol:not([type="a"]) {
+    margin-left: 1rem;
+}
+
+ol[type="a"] li {
+    padding: 0;
+}
+
+.coach-exception {
+    margin-left: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    height: 60vh;
+}
+
+section.centered-text-column-full-width {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+table {
+    background-color: rgba(222, 22, 22, 0.38);
+    height: 35vh;
+    width: 90vw;
+    text-align: center;
+    align-self: center;
+    border: 0.2vw solid;
+}
+
+section.centered-text-column-full-width div p {
+    font-style: italic;
+}
+
+.table-note{
+    text-decoration: underline;
 }
