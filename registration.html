@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/main-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <h1>Mighty Ducks Hockey League</h1>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./rules.html">Rules & Policies</a>
+                <a href="./game-info.html">Game Information</a>
+                <a href="#top" id="button-active-page">Registration Form</a>
+            </nav>
+        </section>
+        <figure>
+            <!-- CSS - Background image for the header -->
+        </figure>
+        <h2>Registration Form</h2>
+    </header>
+    <main>
+        <div class="main-section-full-width">
+            <form action="./show-data.html" method="get">
+                <div>
+                    <fieldset class="field-full-name">
+                        <div>
+                            <label for="form-first-name">Player's First Name:</label>
+                            <input type="text" name="first-name" id="form-first-name" placeholder="Michael">
+                        </div>
+                        <div>
+                            <label for="form-last-name">Last Name:</label>
+                            <input type="text" name="last-name" id="form-last-name" placeholder="Randall">
+                        </div>
+                    </fieldset>
+                    <fieldset class="field-address">
+                        <label for="form-street-adress">Street Address:</label>
+                        <input type="text" name="street-adress" id="form-street-adress"
+                            placeholder="1185 Avenue of the Americas">
+                    </fieldset>
+                    <fieldset class="field-city">
+                        <div>
+                            <label for="form-city">City:</label>
+                            <input type="text" name="city" id="form-city" placeholder="New York">
+                        </div>
+                        <div>
+                            <label for="form-zip-code">Zip Code:</label>
+                            <input type="text" name="zip-code" id="form-zip-code" placeholder="10036">
+                        </div>
+                    </fieldset>
+                    <fieldset class="field-birth-info">
+                        <div>
+                            <label for="form-birth-date">Birth Date (mm/dd/yyyy):</label>
+                            <input type="date" name="birth-date" id="form-birth-date">
+                        </div>
+                        <div class="field-gender">
+                            <p>Gender:</p>
+                            <label>Female</label>
+                            <input type="radio" name="gender" value="female">
+                            <label>Male</label>
+                            <input type="radio" name="gender" value="male">
+                        </div>
+                    </fieldset>
+                    <fieldset class="field-grade">
+                        <p>Grade:</p>
+                        <input type="radio" name="grade" value="pre-school">
+                        <label><sup>Pre-School</sup></label>
+                        <input type="radio" name="grade" value="1st">
+                        <label><sup>1st</sup></label>
+                        <input type="radio" name="grade" value="2nd">
+                        <label><sup>2nd</sup></label>
+                        <input type="radio" name="grade" value="3rd">
+                        <label><sup>3rd</sup></label>
+                        <input type="radio" name="grade" value="4th">
+                        <label><sup>4th</sup></label>
+                        <input type="radio" name="grade" value="5th">
+                        <label><sup>5th</sup></label>
+                    </fieldset>
+                </div>
+                <div>
+                    <h3>Which elementary school do you live near?</h3>
+                    <h4>Closest School:</h4>
+                    <fieldset class="field-closest-school">
+                        <select name="closest-school" id="form-closest-school">
+                            <option value="aj-katzenmaier">AJ Katzenmaier</option>
+                            <option value="greenbay">Greenbay</option>
+                            <option value="howard-a-yeager">Howard A Yeager</option>
+                            <option value="marjorie-p-hart">Marjorie P Hart</option>
+                            <option value="north-elementary">North Elementary</option>
+                            <option value="south-elementary">South Elementary</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div>
+                    <h3>What position(s) do you normally play? (Check all that apply)</h3>
+                    <fieldset class="field-positions">
+                        <div>
+                            <label>
+                                <input type="checkbox" name="positions" value="forward">
+                                Forward
+                            </label>
+                            <label>
+                                <input type="checkbox" name="positions" value="defense">
+                                Defense
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="positions" value="midfield">
+                                Midfield
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="positions" value="goalkeeper">
+                                Goalkeeper
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="field-uniform-size">
+                        <h3>Uniform Size</h3>
+                        <div>
+                            <label>
+                                <input type="radio" name="uniform-size" value="youth-small">
+                                Youth Small
+                            </label>
+                            <label>
+                                <input type="radio" name="uniform-size" value="small">
+                                Small
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="uniform-size" value="youth-medium">
+                                Youth Medium
+                            </label>
+                            <label>
+                                <input type="radio" name="uniform-size" value="medium">
+                                Medium
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="uniform-size" value="youth-large">
+                                Youth Large
+                            </label>
+                            <label>
+                                <input type="radio" name="uniform-size" value="large">
+                                Large
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="uniform-size" value="extra-large">
+                                Extra Large
+                            </label>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="parent-permission">
+                    <article>
+                        <h3>Permission to Play</h3>
+                        <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide
+                            by
+                            all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of
+                            physical injury associated with hockey and in consideration for the "League" accepting the
+                            registrant for its hockey programs and activities, I hereby release, discharge, and/or
+                            otherwise
+                            indemnify MDHL, their employees and associated personnel and volunteers, including the
+                            facilities used for practices and games, against any claim by or on behalf of the registrant
+                            as
+                            a result of the registrant's participation in the program and/or beign transported to or
+                            from
+                            MDHL sponsored activities, which transportation<br>By entering my name below, I hereby agree
+                            and authorize
+                            the above. In addition, By entering my name below, I also acknowledge that I have read the
+                            cancellation
+                            policy and agree to its terms.</p>
+                    </article>
+                    <fieldset class="field-signature">
+                        <label for="form-parent-signature">Parent/Guardian Signature:</label>
+                        <input type="text" name="parent-signature" id="form-parent-signature">
+                    </fieldset>
+                    <fieldset class="field-date">
+                        <label for="form-date">Date:</label>
+                        <input type="date" name="signature-date" id="form-date">
+                    </fieldset>
+                    <button class="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

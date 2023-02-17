@@ -12,9 +12,9 @@ main {
 
 header {
     z-index: 1;
-    background-color: white;
     position: sticky;
     top: 0;
+    background-color: white;
 }
 
 header section {
@@ -23,24 +23,23 @@ header section {
 }
 
 header figure {
-    background-image: url(../assets/header-banner.jpg);
+    height: 10vh;
     background-color: black;
     background-size: cover;
+    background-image: url(../assets/header-banner.jpg);
     background-position: 0 20%;
-    height: 10vh;
 }
 
 header section nav {
     display: flex;
+    transform: translate(-0.5vw, 2vh);
     justify-content: end;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5vw;
-    transform: translate(-0.5vw, 2vh);
 }
 
 header section nav a {
-    max-height: 4vh;
     font-size: 2vh;
     padding: 0 1.5vw 0 1.5vw;
     box-shadow: 0.4vh 0.4vh gray;
@@ -50,8 +49,9 @@ header section nav a {
     text-decoration: none;
 }
 
-#button-active-page {
+#button-active-page, .submit:hover {
     background-color: #70ad47;
+    
 }
 
 h1 {
@@ -69,7 +69,7 @@ h2 {
 }
 
 div.main-section-between-images {
-    margin-top: 2vh;
+    margin: 2vh 0 2vh 0;
     display: flex;
     flex-direction: column;
     transform: translate(10vw);
@@ -92,7 +92,10 @@ div.main-section-between-images article.main-article-about,
 div.main-section-between-images div.main-article-contact,
 div.main-section-full-width article,
 div.main-section-full-width dl.table-upper-note,
-div.main-section-full-width ol:not(.alpha-list) {
+div.main-section-full-width ol:not(.alpha-list),
+div.main-section-full-width form,
+fieldset.field-closest-school,
+div.parent-permission {
     display: flex;
     flex-direction: column;
     gap: 1vh;
@@ -107,7 +110,7 @@ div.main-section-full-width * {
 }
 
 div.main-section-full-width {
-    margin-top: 2vh;
+    margin: 2vh 0 2vh 0;
     display: flex;
     flex-direction: column;
     transform: translate(5vw);
@@ -125,6 +128,10 @@ div.main-section-full-width article.rules-subtitle {
     list-style-position: inside;
 }
 
+ol.number-list>li::marker {
+    font-weight: bold;
+  }
+
 .alpha-list {
     list-style-type: lower-alpha;
 }
@@ -133,19 +140,26 @@ div.main-section-full-width article.rules-subtitle {
     list-style-type: circle;
 }
 
+#list-item-with-margin {
+    margin: 0 5vw 0 5vw;
+}
+
 div.main-section-full-width table {
-    text-align: center;
     background-color: rgba(222, 22, 22, 0.78);
     border: 0.2vh solid;
+    text-align: center;
 }
 
 div.main-section-full-width table tbody td a {
-    text-decoration: underline;
+    text-decoration: none;
     color: black;
 }
 
-div.main-section-full-width dl.table-upper-note dd {
+div.main-section-full-width dl.table-upper-note {
     font-style: italic;
+}
+
+div.main-section-full-width dl.table-upper-note dd {
     text-decoration: underline;
 }
 
@@ -160,15 +174,19 @@ div.main-section-full-width div.table-lower-note-contact {
     justify-content: space-between;
 }
 
-/* div.main-section-full-width div.table-lower-note-contact p a {
+div.main-section-full-width div.table-lower-note-contact p a {
     text-decoration: none;
     color: black;
-} */
+}
 
-div.main-section-full-width table tbody tr td iframe {
-    width: 14.5vw;
-    height: 420px;
+div.main-section-full-width table.table-location-map tbody tr td iframe {
+    width: 14vw;
+    height: 21vh;
     border: 0.2vh solid;
+}
+
+div.main-section-full-width table.table-location-map thead th {
+    font-size: 0.8rem;
 }
 
 img.main-logo {
@@ -180,6 +198,97 @@ img.main-logo {
     left: 0.3vw;
 }
 
+form>div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2vh;
+}
+
+fieldset.field-full-name,
+fieldset.field-address,
+fieldset.field-city,
+fieldset.field-birth-info,
+fieldset.field-signature {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding-bottom: 0.5vh;
+}
+
+fieldset.field-grade,
+fieldset.field-closest-school,
+fieldset.field-date {
+    border: none;
+}
+
+fieldset.field-closest-school select {
+    width: fit-content;
+}
+
+
+fieldset.field-grade * {
+    display: inline-block;
+}
+
+fieldset.field-full-name div,
+fieldset.field-city div,
+fieldset.field-birth-info div,
+fieldset.field-date div {
+    display: flex;
+    width: 50%;
+}
+
+fieldset.field-full-name div input,
+fieldset.field-address input,
+fieldset.field-city div input,
+fieldset.field-signature input {
+    flex-grow: 1;
+    border: none;
+    text-decoration: underline;
+}
+
+fieldset.field-full-name div label,
+fieldset.field-address label,
+fieldset.field-city div label,
+fieldset.field-birth-info div label,
+fieldset.field-birth-info div p,
+fieldset.field-birth-info div input,
+div.parent-permission label,
+fieldset.field-positions div input,
+fieldset.field-uniform-size div input {
+    margin-right: 0.5vw;
+}
+
+fieldset.field-positions,
+fieldset.field-uniform-size {
+    border: none;
+    margin-top: 0.5vh;
+}
+
+fieldset.field-positions div,
+fieldset.field-uniform-size div {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    margin-top: 0.5vh;
+}
+
+fieldset.field-grade label sup {
+    font-size: 0.6rem;
+}
+
+div.parent-permission article p {
+    text-align: justify;
+    text-indent: 0;
+}
+
+.submit {
+    background-color: #4472c4;
+    color: white;
+    width: 10vw;
+    align-self: center;
+}
+
 img.image-right-aside {
     margin-top: 2vh;
     width: 29vw;
@@ -188,10 +297,27 @@ img.image-right-aside {
     right: 0.3vw;
 }
 
+body.show-data {
+    text-align: center;
+}
+
+table.show-data {
+    display: flex;
+    align-self: center;
+}
+
 @media screen and (max-width: 768px) {
     div.main-section-between-images {
         margin-top: 0.5vh;
         width: 80vw;
+    }
+
+    fieldset.field-full-name,
+    fieldset.field-address,
+    fieldset.field-city,
+    fieldset.field-birth-info,
+    fieldset.field-signature {
+        display: inline;
     }
 
     main aside img {
